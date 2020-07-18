@@ -5,6 +5,7 @@
 body {
     color: #fff;
     background-color: black;
+    box-sizing: border-box;
 }
 ul {
     background-color: #1a1a1a;
@@ -35,7 +36,6 @@ footer {
     width: 192.2px;
     height: 108.2px;
     margin-left: 5px;
-    /* transition-delay: .5s; */
     transition-duration: .2s;
     border: 2px solid #121212;
 }
@@ -84,19 +84,24 @@ footer {
 #nav-Logo {
     float: left;
     display: block;
-    padding: 4px 14px;
-    color: #fff;
-    text-align: center;
-    font-size: 2em;
+    padding-left: 5%;
+}
+#nav-Logo > img {
+    width: 43px;
+    height: 43px;
 }
 .colorfont {
     color: rgb(197, 9, 9);
 }
 @media (max-width: 600px) {
-    li, #nav-Logo {
+    li, #nav-Logo  {
         float: none;
     }
     .SubTitlesImg {
         overflow-x: unset;
+    }
+    #nav-Logo {
+        display: flex;
+        justify-content: center;
     }
 }
