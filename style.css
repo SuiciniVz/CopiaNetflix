@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #fff;
+    background-color: black;
+}
+ul {
+    background-color: #1a1a1a;
+    list-style-type: none;
+    overflow: hidden;
+}
+li {
+    display: inline;
+    float: right;
+}
+li > a{
+    display: block;
+    padding: 14px 16px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+li > a:hover {
+    background-color: #111;
+}
+
+.imgSize {
+    width: 192.2px;
+    height: 108.2px;
+    margin-left: 10px;
+    transition-delay: .3s;
+    transition-duration: .4s;
+    border: 2px solid #121212;
+    /* position: relative; */
+}
+.imgSize:hover {
+    width: 307px;
+    height: 173.11px;
+    border: 2px solid #fff;
+}
+.SubTitle {
+    font-size: 1.5em;
+    margin: 10px;
+}
+.SubTitlesImg {
+    display: flex;
+    width:100%;
+    position: relative;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+    overflow-x: hidden; 
+}
+.boxImg {
+    display: flex;
+}
+.boxImg, .imgSize {
+    scroll-snap-align: start;
+}
+
+#destaque {
+    margin: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#main-img {
+    z-index: -10;
+    background-image: url("./img/destaque.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#shadow {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgb(0, 0, 0, 0), rgb(0, 0, 0));
+}
+#nav-Logo {
+    float: left;
+    display: block;
+    padding: 4px 14px;
+    color: #fff;
+    text-align: center;
+    font-size: 2em;
+}
+.colorfont {
+    color: rgb(197, 9, 9);
+}
+@media (max-width: 600px) {
+    li, #nav-Logo {
+        float: none;
+    }
+    .SubTitlesImg {
+        overflow-x: unset;
+    }
+}
